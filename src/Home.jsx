@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 
@@ -9,9 +10,9 @@ function Home(){
     return(
         <div className="container">
             <h2>Crud app with JSON server</h2>
-            <button className="btn btn-success my-3">
+            <Link to="/create" className="btn btn-success my-3">
                 Create +
-            </button>
+            </Link>
             <table className="table">
                 <thead>
                     <tr>
@@ -29,7 +30,7 @@ function Home(){
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>
-                                    <button className="btn btn-sm btn-primary ">Edit</button>
+                                    <Link to={`/edit/${user.id}`}  className="btn btn-sm btn-primary ">Edit</Link>
                                     <button className="btn btn-sm btn-danger ms-2 ">Delete</button>
                                 </td>
                             </tr>
