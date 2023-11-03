@@ -15,5 +15,5 @@ export const userList=[
         email:"salman97t@gmail.com",
         id:3
         
-    }
-]
+    },
+];
